@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Forename:</strong>
+  <%= @lead.forename %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @lead.surname %>
+</p>
+
+<p>
+  <strong>Organisation:</strong>
+  <%= @lead.organisation %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @lead.value %>
+</p>
+
+<p>
+  <strong>Responsedate:</strong>
+  <%= @lead.responsedate %>
+</p>
+
+<p>
+  <strong>Responsedaysleft:</strong>
+  <%= @lead.responsedaysleft %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @lead.startdate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @lead.enddate %>
+</p>
+
+<p>
+  <strong>Contractlength:</strong>
+  <%= @lead.contractlength %>
+</p>
+
+<p>
+  <strong>Dayrate:</strong>
+  <%= @lead.dayrate %>
+</p>
+
+<%= high_chart("some_id", @chart) %>
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>

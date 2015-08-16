@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Leads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Forename</th>
+      <th>Surname</th>
+      <th>Organisation</th>
+      <th>Value</th>
+      <th>Responsedate</th>
+      <th>Responsedaysleft</th>
+      <th>Startdate</th>
+      <th>Enddate</th>
+      <th>Contractlength</th>
+      <th>Dayrate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leads.each do |lead| %>
+      <tr>
+        <td><%= lead.forename %></td>
+        <td><%= lead.surname %></td>
+        <td><%= lead.organisation %></td>
+        <td><%= number_to_currency(lead.value, :unit => "£ ") %></td>
+        <td><%= lead.responsedate %></td>
+        <td><%= lead.responsedaysleft %></td>
+        <td><%= lead.startdate %></td>
+        <td><%= lead.enddate %></td>
+        <td><%= lead.contractlength %></td>
+        <td><%= number_to_currency(lead.dayrate, :unit => "£ ") %></td>
+        <td><%= link_to 'Show', lead %></td>
+        <td><%= link_to 'Edit', edit_lead_path(lead) %></td>
+        <td><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lead', new_lead_path %>
